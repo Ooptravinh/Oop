@@ -19,16 +19,18 @@ namespace DTO
         [Key]
         public string MaSTK { get => maSTK; set => maSTK = value; }
         [ForeignKey("MaKH")]
-        public virtual KhachHang KhachHang { get; set; }
+        public virtual KhachHang KH { get; set; }
+        [Required]
         public string MaKH { get => maKH; set => maKH = value; }
-
+        [ForeignKey("MaLoaiTK")]
+        public virtual LoaiTietKiem loaiTK { get; set; }
+        [Required]
         public string MaLoaiTK { get => maLoaiTK; set => maLoaiTK = value; }
         [Required]
         public string NgayMoSo { get => ngayMoSo; set => ngayMoSo = value; }
-        [Required]
         public double SoTienGui { get => soTienGui; set => soTienGui = value; }
         public STK() { }
-        public STK(string maSTK, string maKH, string maLoaiTK, DateTime ngayMoSo, double soTienGui)
+        public STK(string maSTK, string maKH, string maLoaiTK, string ngayMoSo, double soTienGui)
         {
             this.maSTK = maSTK;
             this.maKH = maKH;
