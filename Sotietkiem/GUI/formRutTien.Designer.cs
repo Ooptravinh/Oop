@@ -41,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btSearch = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -111,7 +112,7 @@
             this.tbMaRut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMaRut.Location = new System.Drawing.Point(223, 197);
             this.tbMaRut.Name = "tbMaRut";
-            this.tbMaRut.Size = new System.Drawing.Size(270, 36);
+            this.tbMaRut.Size = new System.Drawing.Size(163, 36);
             this.tbMaRut.TabIndex = 30;
             this.tbMaRut.TextChanged += new System.EventHandler(this.tbMaRut_TextChanged);
             // 
@@ -176,11 +177,23 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // btSearch
+            // 
+            this.btSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSearch.Location = new System.Drawing.Point(392, 197);
+            this.btSearch.Name = "btSearch";
+            this.btSearch.Size = new System.Drawing.Size(101, 36);
+            this.btSearch.TabIndex = 35;
+            this.btSearch.Text = "Tìm kiếm";
+            this.btSearch.UseVisualStyleBackColor = true;
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
+            // 
             // formRutTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 418);
+            this.Controls.Add(this.btSearch);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dtpNgayRut);
             this.Controls.Add(this.tbTienRut);
@@ -216,5 +229,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btSearch;
     }
 }

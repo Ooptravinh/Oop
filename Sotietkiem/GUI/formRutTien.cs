@@ -51,5 +51,10 @@ namespace GUI
         {
             //button quay lại form sổ tiết kiệm
         }
+
+        private void btSearch_Click(object sender, EventArgs e)
+        {
+            //Tìm kiếm thông tin khách hàng
+        }
     }
 }

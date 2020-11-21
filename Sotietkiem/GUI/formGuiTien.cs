@@ -46,5 +46,10 @@ namespace GUI
         {
             //button quay lại về form sổ tiết kiệm
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Tìm kiếm thông tin khách hàng
+        }
     }
 }

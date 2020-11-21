@@ -46,18 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="formBaoCao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formBaoCao.Designer.cs">
-      <DependentUpon>formBaoCao.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formDoanhSo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formDoanhSo.Designer.cs">
-      <DependentUpon>formDoanhSo.cs</DependentUpon>
-    </Compile>
     <Compile Include="formGuiTien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,12 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="formBaoCao.resx">
-      <DependentUpon>formBaoCao.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formDoanhSo.resx">
-      <DependentUpon>formDoanhSo.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Tìm kiếm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tìm kiếm.Designer.cs">
+      <DependentUpon>Tìm kiếm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="formGuiTien.resx">
       <DependentUpon>formGuiTien.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +91,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Tìm kiếm.resx">
+      <DependentUpon>Tìm kiếm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

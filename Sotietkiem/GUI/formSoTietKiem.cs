@@ -19,17 +19,11 @@ namespace GUI
 
         private void btThemSo_Click(object sender, EventArgs e)
         {
-            //Thêm sổ tiết kiệm mới
+            //Cho phép nhập vào các ô thông tin
         }
-
-        private void btXoa_Click(object sender, EventArgs e)
-        {
-            //Xóa sổ tiết kiệm mới
-        }
-
         private void btSua_Click(object sender, EventArgs e)
         {
-            //Thay đổi thông tin sổ tiết kiệm 
+            //Xóa các ô textbox
         }
 
         private void tbMaTK_TextChanged(object sender, EventArgs e)
@@ -85,6 +79,21 @@ namespace GUI
         private void btThoat_Click(object sender, EventArgs e)
         {
             //button quay lại form Doanh Số
+        }
+
+        private void btConfirm_Click(object sender, EventArgs e)
+        {
+            //Xác nhận các thông tin ở textbox để thêm vào dataB
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Xóa sổ tiệt kiệm
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            //Thay đổi thông tin sổ tiết kiệm
         }
     }
 }
