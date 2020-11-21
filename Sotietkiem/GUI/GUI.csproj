@@ -46,31 +46,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUI.cs">
+    <Compile Include="formBaoCao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI.Designer.cs">
-      <DependentUpon>GUI.cs</DependentUpon>
+    <Compile Include="formBaoCao.Designer.cs">
+      <DependentUpon>formBaoCao.cs</DependentUpon>
     </Compile>
-    <Compile Include="GuiTien.cs">
+    <Compile Include="formDoanhSo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GuiTien.Designer.cs">
-      <DependentUpon>GuiTien.cs</DependentUpon>
+    <Compile Include="formDoanhSo.Designer.cs">
+      <DependentUpon>formDoanhSo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formGuiTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formGuiTien.Designer.cs">
+      <DependentUpon>formGuiTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formRutTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRutTien.Designer.cs">
+      <DependentUpon>formRutTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formSoTietKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formSoTietKiem.Designer.cs">
+      <DependentUpon>formSoTietKiem.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RutTien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RutTien.Designer.cs">
-      <DependentUpon>RutTien.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="GUI.resx">
-      <DependentUpon>GUI.cs</DependentUpon>
+    <EmbeddedResource Include="formBaoCao.resx">
+      <DependentUpon>formBaoCao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GuiTien.resx">
-      <DependentUpon>GuiTien.cs</DependentUpon>
+    <EmbeddedResource Include="formDoanhSo.resx">
+      <DependentUpon>formDoanhSo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formGuiTien.resx">
+      <DependentUpon>formGuiTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRutTien.resx">
+      <DependentUpon>formRutTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formSoTietKiem.resx">
+      <DependentUpon>formSoTietKiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -80,10 +101,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RutTien.resx">
-      <DependentUpon>RutTien.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -98,14 +117,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAO\DAO.csproj">
-      <Project>{462cd8b1-ecb5-4fee-b687-d1e638ae24b7}</Project>
-      <Name>DAO</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{ba5610b5-4e42-496e-b0d2-6c39ee6db3d5}</Project>
-      <Name>DTO</Name>
-    </ProjectReference>
+    <None Include="Resources\20190710225615-f9b7_wm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20190710225615-f9b7_wm1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
