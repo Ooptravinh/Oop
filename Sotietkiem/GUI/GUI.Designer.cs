@@ -48,9 +48,9 @@
             this.txtKhachHang = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtSoTienGui = new System.Windows.Forms.TextBox();
-            this.txtLoaTietKiem = new System.Windows.Forms.TextBox();
             this.txtCMND = new System.Windows.Forms.TextBox();
-            this.txtNgayMoSo = new System.Windows.Forms.TextBox();
+            this.cmBLoaiTietKiem = new System.Windows.Forms.ComboBox();
+            this.dtPNgayMoSo = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -65,9 +65,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtNgayMoSo);
+            this.groupBox1.Controls.Add(this.dtPNgayMoSo);
+            this.groupBox1.Controls.Add(this.cmBLoaiTietKiem);
             this.groupBox1.Controls.Add(this.txtCMND);
-            this.groupBox1.Controls.Add(this.txtLoaTietKiem);
             this.groupBox1.Controls.Add(this.txtSoTienGui);
             this.groupBox1.Controls.Add(this.txtDiaChi);
             this.groupBox1.Controls.Add(this.txtKhachHang);
@@ -243,13 +243,6 @@
             this.txtSoTienGui.Size = new System.Drawing.Size(177, 20);
             this.txtSoTienGui.TabIndex = 12;
             // 
-            // txtLoaTietKiem
-            // 
-            this.txtLoaTietKiem.Location = new System.Drawing.Point(507, 17);
-            this.txtLoaTietKiem.Name = "txtLoaTietKiem";
-            this.txtLoaTietKiem.Size = new System.Drawing.Size(188, 20);
-            this.txtLoaTietKiem.TabIndex = 13;
-            // 
             // txtCMND
             // 
             this.txtCMND.Location = new System.Drawing.Point(507, 57);
@@ -257,12 +250,20 @@
             this.txtCMND.Size = new System.Drawing.Size(188, 20);
             this.txtCMND.TabIndex = 14;
             // 
-            // txtNgayMoSo
+            // cmBLoaiTietKiem
             // 
-            this.txtNgayMoSo.Location = new System.Drawing.Point(507, 100);
-            this.txtNgayMoSo.Name = "txtNgayMoSo";
-            this.txtNgayMoSo.Size = new System.Drawing.Size(188, 20);
-            this.txtNgayMoSo.TabIndex = 15;
+            this.cmBLoaiTietKiem.FormattingEnabled = true;
+            this.cmBLoaiTietKiem.Location = new System.Drawing.Point(507, 17);
+            this.cmBLoaiTietKiem.Name = "cmBLoaiTietKiem";
+            this.cmBLoaiTietKiem.Size = new System.Drawing.Size(188, 21);
+            this.cmBLoaiTietKiem.TabIndex = 16;
+            // 
+            // dtPNgayMoSo
+            // 
+            this.dtPNgayMoSo.Location = new System.Drawing.Point(507, 100);
+            this.dtPNgayMoSo.Name = "dtPNgayMoSo";
+            this.dtPNgayMoSo.Size = new System.Drawing.Size(200, 20);
+            this.dtPNgayMoSo.TabIndex = 17;
             // 
             // GUI
             // 
@@ -299,9 +300,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtNgayMoSo;
         private System.Windows.Forms.TextBox txtCMND;
-        private System.Windows.Forms.TextBox txtLoaTietKiem;
         private System.Windows.Forms.TextBox txtSoTienGui;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtKhachHang;
@@ -311,6 +310,8 @@
         private System.Windows.Forms.Button btnRutTien;
         private System.Windows.Forms.Button btnGuiTien;
         private System.Windows.Forms.Button btnTraCuu;
+        private System.Windows.Forms.DateTimePicker dtPNgayMoSo;
+        private System.Windows.Forms.ComboBox cmBLoaiTietKiem;
     }
 }
 
