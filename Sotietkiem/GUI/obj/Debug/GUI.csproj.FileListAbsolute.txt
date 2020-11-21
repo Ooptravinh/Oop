@@ -10,3 +10,4 @@ C:\Users\APC\Desktop\Oop\Sotietkiem\GUI\bin\Debug\GUI.exe
 C:\Users\APC\Desktop\Oop\Sotietkiem\GUI\bin\Debug\GUI.pdb
 C:\Users\APC\Desktop\Oop\Sotietkiem\GUI\obj\Debug\GUI.exe
 C:\Users\APC\Desktop\Oop\Sotietkiem\GUI\obj\Debug\GUI.pdb
+C:\Users\APC\Desktop\Oop\Sotietkiem\GUI\obj\Debug\GUI.formTimKiem.resources

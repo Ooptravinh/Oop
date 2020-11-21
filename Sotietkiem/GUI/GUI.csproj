@@ -66,11 +66,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tìm kiếm.cs">
+    <Compile Include="formTimKiem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tìm kiếm.Designer.cs">
-      <DependentUpon>Tìm kiếm.cs</DependentUpon>
+    <Compile Include="formTimKiem.Designer.cs">
+      <DependentUpon>formTimKiem.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="formGuiTien.resx">
       <DependentUpon>formGuiTien.cs</DependentUpon>
@@ -91,8 +91,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Tìm kiếm.resx">
-      <DependentUpon>Tìm kiếm.cs</DependentUpon>
+    <EmbeddedResource Include="formTimKiem.resx">
+      <DependentUpon>formTimKiem.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

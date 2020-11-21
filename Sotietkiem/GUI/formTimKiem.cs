@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class Tìm_kiếm : Form
+    public partial class formTimKiem : Form
     {
-        public Tìm_kiếm()
+        public formTimKiem()
         {
             InitializeComponent();
         }

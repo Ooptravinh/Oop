@@ -46,13 +46,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btThayDoi = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.btConfirm = new System.Windows.Forms.Button();
             this.btDeleteTxt = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
             this.btRut = new System.Windows.Forms.Button();
             this.btGui = new System.Windows.Forms.Button();
-            this.btThayDoi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgSoTK)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -224,25 +224,34 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btThayDoi);
-            this.groupBox1.Controls.Add(this.btXoa);
             this.groupBox1.Controls.Add(this.btConfirm);
             this.groupBox1.Controls.Add(this.btDeleteTxt);
             this.groupBox1.Controls.Add(this.btThem);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(458, 170);
+            this.groupBox1.Location = new System.Drawing.Point(476, 165);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(215, 192);
+            this.groupBox1.Size = new System.Drawing.Size(164, 197);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng:";
             // 
+            // btThayDoi
+            // 
+            this.btThayDoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThayDoi.Location = new System.Drawing.Point(187, 663);
+            this.btThayDoi.Name = "btThayDoi";
+            this.btThayDoi.Size = new System.Drawing.Size(154, 39);
+            this.btThayDoi.TabIndex = 5;
+            this.btThayDoi.Text = "Thay đổi";
+            this.btThayDoi.UseVisualStyleBackColor = true;
+            this.btThayDoi.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // btXoa
             // 
-            this.btXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXoa.Location = new System.Drawing.Point(6, 79);
+            this.btXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXoa.Location = new System.Drawing.Point(12, 662);
             this.btXoa.Name = "btXoa";
-            this.btXoa.Size = new System.Drawing.Size(98, 48);
+            this.btXoa.Size = new System.Drawing.Size(154, 39);
             this.btXoa.TabIndex = 4;
             this.btXoa.Text = "Xóa sổ";
             this.btXoa.UseVisualStyleBackColor = true;
@@ -251,7 +260,7 @@
             // btConfirm
             // 
             this.btConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConfirm.Location = new System.Drawing.Point(110, 102);
+            this.btConfirm.Location = new System.Drawing.Point(36, 137);
             this.btConfirm.Name = "btConfirm";
             this.btConfirm.Size = new System.Drawing.Size(99, 48);
             this.btConfirm.TabIndex = 3;
@@ -262,7 +271,7 @@
             // btDeleteTxt
             // 
             this.btDeleteTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDeleteTxt.Location = new System.Drawing.Point(109, 48);
+            this.btDeleteTxt.Location = new System.Drawing.Point(37, 83);
             this.btDeleteTxt.Name = "btDeleteTxt";
             this.btDeleteTxt.Size = new System.Drawing.Size(98, 48);
             this.btDeleteTxt.TabIndex = 2;
@@ -273,7 +282,7 @@
             // btThem
             // 
             this.btThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThem.Location = new System.Drawing.Point(6, 25);
+            this.btThem.Location = new System.Drawing.Point(37, 25);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(98, 48);
             this.btThem.TabIndex = 0;
@@ -284,7 +293,7 @@
             // btRut
             // 
             this.btRut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btRut.Location = new System.Drawing.Point(352, 662);
+            this.btRut.Location = new System.Drawing.Point(530, 662);
             this.btRut.Name = "btRut";
             this.btRut.Size = new System.Drawing.Size(143, 39);
             this.btRut.TabIndex = 40;
@@ -295,7 +304,7 @@
             // btGui
             // 
             this.btGui.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGui.Location = new System.Drawing.Point(155, 662);
+            this.btGui.Location = new System.Drawing.Point(356, 663);
             this.btGui.Name = "btGui";
             this.btGui.Size = new System.Drawing.Size(154, 39);
             this.btGui.TabIndex = 39;
@@ -303,23 +312,14 @@
             this.btGui.UseVisualStyleBackColor = true;
             this.btGui.Click += new System.EventHandler(this.btGui_Click);
             // 
-            // btThayDoi
-            // 
-            this.btThayDoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThayDoi.Location = new System.Drawing.Point(6, 133);
-            this.btThayDoi.Name = "btThayDoi";
-            this.btThayDoi.Size = new System.Drawing.Size(98, 48);
-            this.btThayDoi.TabIndex = 5;
-            this.btThayDoi.Text = "Thay đổi";
-            this.btThayDoi.UseVisualStyleBackColor = true;
-            this.btThayDoi.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // formSoTietKiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 725);
+            this.Controls.Add(this.btThayDoi);
             this.Controls.Add(this.btRut);
+            this.Controls.Add(this.btXoa);
             this.Controls.Add(this.btGui);
             this.Controls.Add(this.dtgSoTK);
             this.Controls.Add(this.cbLoaiSo);

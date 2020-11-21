@@ -103,7 +103,7 @@
             this.tbTenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTenKH.Location = new System.Drawing.Point(223, 249);
             this.tbTenKH.Name = "tbTenKH";
-            this.tbTenKH.Size = new System.Drawing.Size(270, 36);
+            this.tbTenKH.Size = new System.Drawing.Size(163, 36);
             this.tbTenKH.TabIndex = 21;
             this.tbTenKH.TextChanged += new System.EventHandler(this.tbTenKH_TextChanged);
             // 
@@ -112,7 +112,7 @@
             this.tbMaGui.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMaGui.Location = new System.Drawing.Point(223, 197);
             this.tbMaGui.Name = "tbMaGui";
-            this.tbMaGui.Size = new System.Drawing.Size(156, 36);
+            this.tbMaGui.Size = new System.Drawing.Size(270, 36);
             this.tbMaGui.TabIndex = 20;
             this.tbMaGui.TextChanged += new System.EventHandler(this.tbMaSo_TextChanged);
             // 
@@ -179,7 +179,7 @@
             // btSearch
             // 
             this.btSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSearch.Location = new System.Drawing.Point(392, 197);
+            this.btSearch.Location = new System.Drawing.Point(392, 249);
             this.btSearch.Name = "btSearch";
             this.btSearch.Size = new System.Drawing.Size(101, 36);
             this.btSearch.TabIndex = 25;
