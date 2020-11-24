@@ -49,12 +49,16 @@ namespace GUI
 
         private void btThoat_Click(object sender, EventArgs e)
         {
-            //button quay lại form sổ tiết kiệm
+            this.Close();
         }
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            //Tìm kiếm thông tin khách hàng
+            formTimKiem frm2 = new formTimKiem();
+            frm2.TopLevel = false;
+            panel2.Controls.Add(frm2);
+            frm2.Dock = DockStyle.Fill;
+            frm2.Show();
         }
     }
 }

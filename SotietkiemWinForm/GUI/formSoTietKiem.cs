@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace GUI
 {
     public partial class formSoTietKiem : Form
     {
-        private  QuanlySoTietKiemEntities1 database = new QuanlySoTietKiemEntities1();
+        private  QuanlySoTietKiemEntities database = new QuanlySoTietKiemEntities();
         public formSoTietKiem()
         {
             InitializeComponent();
@@ -86,12 +87,20 @@ namespace GUI
 
         private void btGui_Click(object sender, EventArgs e)
         {
-            //button hiện form gửi tiền
+            formGuiTien frm2 = new formGuiTien();
+            frm2.TopLevel = false;
+            panelGuiTien.Controls.Add(frm2);
+            frm2.Dock = DockStyle.Fill;
+            frm2.Show();
         }
 
         private void btRut_Click(object sender, EventArgs e)
         {
-            //button hiện form rút tiền
+            formRutTien frm2 = new formRutTien();
+            frm2.TopLevel = false;
+            panelGuiTien.Controls.Add(frm2);
+            frm2.Dock = DockStyle.Fill;
+            frm2.Show();
         }
 
         private void btThoat_Click(object sender, EventArgs e)
@@ -155,6 +164,7 @@ namespace GUI
                     }
                 }
                 stk.MAKH = MaTK;
+                stk.MAKH = kh.MAKH;
                 kh.HOTEN = TenKH;
                 stk.MALOAITK = Loai.MALOAITK;
                 kh.CMND = Convert.ToByte(CMND);
@@ -211,20 +221,20 @@ namespace GUI
             var dsSTK = from stk in database.SOTIETKIEMs
                         select new
                         {
-                            tbMaTK = stk.MASOTK,
-                            tbTenKH = stk.KHACHHANG.HOTEN,
-                            tbTienGui = stk.SOTIENGUI,
-                            tbDiaChi = stk.KHACHHANG.DIACHI,
-                            tbCMND = stk.KHACHHANG.CMND,
-                            dtpNgayMoSo = stk.NGAYMOSO,
-                            cbLoaiSo = stk.LOAITIETKIEM.LOAI
+                            MaTK = stk.MASOTK,
+                            TenKH = stk.KHACHHANG.HOTEN,
+                            TienGui = stk.SOTIENGUI,
+                            DiaChi = stk.KHACHHANG.DIACHI,
+                            CMND = stk.KHACHHANG.CMND,
+                            NgayMoSo = stk.NGAYMOSO,
+                            LoaiSo = stk.LOAITIETKIEM.LOAI
                         };
             dtgSoTK.DataSource = dsSTK.ToList();
             cbLoaiSo.DataSource = database.LOAITIETKIEMs.ToList();
             cbLoaiSo.DisplayMember = "Loai";
 
             //Add bingding
-            AddSoTietKiemBindings();
+            //AddSoTietKiemBindings();
         }
         private void AddSoTietKiemBindings()
         {

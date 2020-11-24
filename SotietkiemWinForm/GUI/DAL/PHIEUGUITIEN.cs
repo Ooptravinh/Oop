@@ -14,19 +14,11 @@ namespace GUI.DAL
     
     public partial class PHIEUGUITIEN
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PHIEUGUITIEN()
-        {
-            this.SOTIETKIEMs = new HashSet<SOTIETKIEM>();
-        }
-    
         public string MAPHIEUGT { get; set; }
         public string MAKH { get; set; }
         public double SOTIENGUI { get; set; }
         public System.DateTime NGAYGUI { get; set; }
     
         public virtual KHACHHANG KHACHHANG { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SOTIETKIEM> SOTIETKIEMs { get; set; }
     }
 }

@@ -53,6 +53,7 @@
             this.btXoa = new System.Windows.Forms.Button();
             this.btRut = new System.Windows.Forms.Button();
             this.btGui = new System.Windows.Forms.Button();
+            this.panelGuiTien = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgSoTK)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -338,11 +339,19 @@
             this.btGui.UseVisualStyleBackColor = true;
             this.btGui.Click += new System.EventHandler(this.btGui_Click);
             // 
+            // panelGuiTien
+            // 
+            this.panelGuiTien.Location = new System.Drawing.Point(519, 0);
+            this.panelGuiTien.Name = "panelGuiTien";
+            this.panelGuiTien.Size = new System.Drawing.Size(562, 658);
+            this.panelGuiTien.TabIndex = 41;
+            // 
             // formSoTietKiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 589);
+            this.ClientSize = new System.Drawing.Size(1088, 665);
+            this.Controls.Add(this.panelGuiTien);
             this.Controls.Add(this.btThayDoi);
             this.Controls.Add(this.btRut);
             this.Controls.Add(this.btXoa);
@@ -404,5 +413,6 @@
         private System.Windows.Forms.Button btConfirm;
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.Button btThayDoi;
+        private System.Windows.Forms.Panel panelGuiTien;
     }
 }

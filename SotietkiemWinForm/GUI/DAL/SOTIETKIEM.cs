@@ -18,11 +18,9 @@ namespace GUI.DAL
         public string MAKH { get; set; }
         public string MALOAITK { get; set; }
         public double SOTIENGUI { get; set; }
-        public string MAPHIEUGT { get; set; }
         public System.DateTime NGAYMOSO { get; set; }
     
         public virtual KHACHHANG KHACHHANG { get; set; }
         public virtual LOAITIETKIEM LOAITIETKIEM { get; set; }
-        public virtual PHIEUGUITIEN PHIEUGUITIEN { get; set; }
     }
 }

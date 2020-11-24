@@ -49,7 +49,6 @@
           <Property Name="MAKH" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="MALOAITK" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="SOTIENGUI" Type="float" Nullable="false" />
-          <Property Name="MAPHIEUGT" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="NGAYMOSO" Type="datetime" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
@@ -114,18 +113,6 @@ warning 6002: The table/view 'QuanlySoTietKiem.dbo.THAMSO' does not have a prima
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_STK_MAPHIEUGT">
-          <End Role="PHIEUGUITIEN" Type="Self.PHIEUGUITIEN" Multiplicity="1" />
-          <End Role="SOTIETKIEM" Type="Self.SOTIETKIEM" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PHIEUGUITIEN">
-              <PropertyRef Name="MAPHIEUGT" />
-            </Principal>
-            <Dependent Role="SOTIETKIEM">
-              <PropertyRef Name="MAPHIEUGT" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="QuanlySoTietKiemModelStoreContainer">
           <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LOAITIETKIEM" EntityType="Self.LOAITIETKIEM" Schema="dbo" store:Type="Tables" />
@@ -154,10 +141,6 @@ warning 6002: The table/view 'QuanlySoTietKiem.dbo.THAMSO' does not have a prima
           </AssociationSet>
           <AssociationSet Name="FK_STK_MALOAITK" Association="Self.FK_STK_MALOAITK">
             <End Role="LOAITIETKIEM" EntitySet="LOAITIETKIEM" />
-            <End Role="SOTIETKIEM" EntitySet="SOTIETKIEM" />
-          </AssociationSet>
-          <AssociationSet Name="FK_STK_MAPHIEUGT" Association="Self.FK_STK_MAPHIEUGT">
-            <End Role="PHIEUGUITIEN" EntitySet="PHIEUGUITIEN" />
             <End Role="SOTIETKIEM" EntitySet="SOTIETKIEM" />
           </AssociationSet>
         </EntityContainer>
@@ -197,7 +180,6 @@ warning 6002: The table/view 'QuanlySoTietKiem.dbo.THAMSO' does not have a prima
           <Property Name="SOTIENGUI" Type="Double" Nullable="false" />
           <Property Name="NGAYGUI" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="KHACHHANG" Relationship="Self.FK_PGT_MAKH" FromRole="PHIEUGUITIEN" ToRole="KHACHHANG" />
-          <NavigationProperty Name="SOTIETKIEMs" Relationship="Self.FK_STK_MAPHIEUGT" FromRole="PHIEUGUITIEN" ToRole="SOTIETKIEM" />
         </EntityType>
         <EntityType Name="PHIEURUTTIEN">
           <Key>
@@ -217,11 +199,9 @@ warning 6002: The table/view 'QuanlySoTietKiem.dbo.THAMSO' does not have a prima
           <Property Name="MAKH" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MALOAITK" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="SOTIENGUI" Type="Double" Nullable="false" />
-          <Property Name="MAPHIEUGT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NGAYMOSO" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="KHACHHANG" Relationship="Self.FK_STK_MAKH" FromRole="SOTIETKIEM" ToRole="KHACHHANG" />
           <NavigationProperty Name="LOAITIETKIEM" Relationship="Self.FK_STK_MALOAITK" FromRole="SOTIETKIEM" ToRole="LOAITIETKIEM" />
-          <NavigationProperty Name="PHIEUGUITIEN" Relationship="Self.FK_STK_MAPHIEUGT" FromRole="SOTIETKIEM" ToRole="PHIEUGUITIEN" />
         </EntityType>
         <EntityType Name="THAMSO">
           <Key>
@@ -283,19 +263,7 @@ warning 6002: The table/view 'QuanlySoTietKiem.dbo.THAMSO' does not have a prima
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_STK_MAPHIEUGT">
-          <End Role="PHIEUGUITIEN" Type="Self.PHIEUGUITIEN" Multiplicity="1" />
-          <End Role="SOTIETKIEM" Type="Self.SOTIETKIEM" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PHIEUGUITIEN">
-              <PropertyRef Name="MAPHIEUGT" />
-            </Principal>
-            <Dependent Role="SOTIETKIEM">
-              <PropertyRef Name="MAPHIEUGT" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="QuanlySoTietKiemEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="QuanlySoTietKiemEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="KHACHHANGs" EntityType="Self.KHACHHANG" />
           <EntitySet Name="LOAITIETKIEMs" EntityType="Self.LOAITIETKIEM" />
           <EntitySet Name="PHIEUGUITIENs" EntityType="Self.PHIEUGUITIEN" />
@@ -318,17 +286,13 @@ warning 6002: The table/view 'QuanlySoTietKiem.dbo.THAMSO' does not have a prima
             <End Role="LOAITIETKIEM" EntitySet="LOAITIETKIEMs" />
             <End Role="SOTIETKIEM" EntitySet="SOTIETKIEMs" />
           </AssociationSet>
-          <AssociationSet Name="FK_STK_MAPHIEUGT" Association="Self.FK_STK_MAPHIEUGT">
-            <End Role="PHIEUGUITIEN" EntitySet="PHIEUGUITIENs" />
-            <End Role="SOTIETKIEM" EntitySet="SOTIETKIEMs" />
-          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QuanlySoTietKiemModelStoreContainer" CdmEntityContainer="QuanlySoTietKiemEntities1">
+        <EntityContainerMapping StorageEntityContainer="QuanlySoTietKiemModelStoreContainer" CdmEntityContainer="QuanlySoTietKiemEntities">
           <EntitySetMapping Name="KHACHHANGs">
             <EntityTypeMapping TypeName="QuanlySoTietKiemModel.KHACHHANG">
               <MappingFragment StoreEntitySet="KHACHHANG">
@@ -376,7 +340,6 @@ warning 6002: The table/view 'QuanlySoTietKiem.dbo.THAMSO' does not have a prima
                 <ScalarProperty Name="MAKH" ColumnName="MAKH" />
                 <ScalarProperty Name="MALOAITK" ColumnName="MALOAITK" />
                 <ScalarProperty Name="SOTIENGUI" ColumnName="SOTIENGUI" />
-                <ScalarProperty Name="MAPHIEUGT" ColumnName="MAPHIEUGT" />
                 <ScalarProperty Name="NGAYMOSO" ColumnName="NGAYMOSO" />
               </MappingFragment>
             </EntityTypeMapping>

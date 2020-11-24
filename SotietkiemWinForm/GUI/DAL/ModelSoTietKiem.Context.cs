@@ -13,10 +13,10 @@ namespace GUI.DAL
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QuanlySoTietKiemEntities1 : DbContext
+    public partial class QuanlySoTietKiemEntities : DbContext
     {
-        public QuanlySoTietKiemEntities1()
-            : base("name=QuanlySoTietKiemEntities1")
+        public QuanlySoTietKiemEntities()
+            : base("name=QuanlySoTietKiemEntities")
         {
         }
     

@@ -34,7 +34,7 @@ namespace GUI
 
         private void btThoat_Click(object sender, EventArgs e)
         {
-            //Quay lại from rút tiền/gửi tiền
+            this.Close();
         }
     }
 }

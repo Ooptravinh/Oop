@@ -56,37 +56,37 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\KHACHHANG.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>ModelSoTietKiem.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\LOAITIETKIEM.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>ModelSoTietKiem.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Model.Context.cs">
+    <Compile Include="DAL\ModelSoTietKiem.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model.Context.tt</DependentUpon>
+      <DependentUpon>ModelSoTietKiem.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Model.cs">
+    <Compile Include="DAL\ModelSoTietKiem.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>ModelSoTietKiem.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Model.Designer.cs">
+    <Compile Include="DAL\ModelSoTietKiem.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model.edmx</DependentUpon>
+      <DependentUpon>ModelSoTietKiem.edmx</DependentUpon>
     </Compile>
     <Compile Include="DAL\PHIEUGUITIEN.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>ModelSoTietKiem.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\PHIEURUTTIEN.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>ModelSoTietKiem.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\SOTIETKIEM.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>ModelSoTietKiem.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\THAMSO.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>ModelSoTietKiem.tt</DependentUpon>
     </Compile>
     <Compile Include="formGuiTien.cs">
       <SubType>Form</SubType>
@@ -136,12 +136,12 @@
     <EmbeddedResource Include="formTimKiem.resx">
       <DependentUpon>formTimKiem.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="DAL\Model.edmx">
+    <EntityDeploy Include="DAL\ModelSoTietKiem.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelSoTietKiem.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DAL\Model.edmx.diagram">
-      <DependentUpon>Model.edmx</DependentUpon>
+    <None Include="DAL\ModelSoTietKiem.edmx.diagram">
+      <DependentUpon>ModelSoTietKiem.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -166,16 +166,17 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Content Include="DAL\Model.Context.tt">
+    <Content Include="DAL\ModelSoTietKiem.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model.edmx</DependentUpon>
-      <LastGenOutput>Model.Context.cs</LastGenOutput>
+      <DependentUpon>ModelSoTietKiem.edmx</DependentUpon>
+      <LastGenOutput>ModelSoTietKiem.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DAL\Model.tt">
+    <Content Include="DAL\ModelSoTietKiem.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model.edmx</DependentUpon>
-      <LastGenOutput>Model.cs</LastGenOutput>
+      <DependentUpon>ModelSoTietKiem.edmx</DependentUpon>
+      <LastGenOutput>ModelSoTietKiem.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
