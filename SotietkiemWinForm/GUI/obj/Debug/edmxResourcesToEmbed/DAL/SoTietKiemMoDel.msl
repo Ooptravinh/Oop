@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuanlySoTietKiemModelStoreContainer" CdmEntityContainer="QuanlySoTietKiemEntities">
+    <EntitySetMapping Name="KHACHHANGs">
+      <EntityTypeMapping TypeName="QuanlySoTietKiemModel.KHACHHANG">
+        <MappingFragment StoreEntitySet="KHACHHANG">
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOAITIETKIEMs">
+      <EntityTypeMapping TypeName="QuanlySoTietKiemModel.LOAITIETKIEM">
+        <MappingFragment StoreEntitySet="LOAITIETKIEM">
+          <ScalarProperty Name="MALOAITK" ColumnName="MALOAITK" />
+          <ScalarProperty Name="LOAI" ColumnName="LOAI" />
+          <ScalarProperty Name="LAIXUAT" ColumnName="LAIXUAT" />
+          <ScalarProperty Name="KYHAN" ColumnName="KYHAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHIEUGUITIENs">
+      <EntityTypeMapping TypeName="QuanlySoTietKiemModel.PHIEUGUITIEN">
+        <MappingFragment StoreEntitySet="PHIEUGUITIEN">
+          <ScalarProperty Name="MAPHIEUGT" ColumnName="MAPHIEUGT" />
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+          <ScalarProperty Name="SOTIENGUI" ColumnName="SOTIENGUI" />
+          <ScalarProperty Name="NGAYGUI" ColumnName="NGAYGUI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHIEURUTTIENs">
+      <EntityTypeMapping TypeName="QuanlySoTietKiemModel.PHIEURUTTIEN">
+        <MappingFragment StoreEntitySet="PHIEURUTTIEN">
+          <ScalarProperty Name="MAPHIEURT" ColumnName="MAPHIEURT" />
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+          <ScalarProperty Name="SOTIENRUT" ColumnName="SOTIENRUT" />
+          <ScalarProperty Name="NGAYRUT" ColumnName="NGAYRUT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SOTIETKIEMs">
+      <EntityTypeMapping TypeName="QuanlySoTietKiemModel.SOTIETKIEM">
+        <MappingFragment StoreEntitySet="SOTIETKIEM">
+          <ScalarProperty Name="MASOTK" ColumnName="MASOTK" />
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+          <ScalarProperty Name="MALOAITK" ColumnName="MALOAITK" />
+          <ScalarProperty Name="SOTIENGUI" ColumnName="SOTIENGUI" />
+          <ScalarProperty Name="MAPHIEUGT" ColumnName="MAPHIEUGT" />
+          <ScalarProperty Name="NGAYMOSO" ColumnName="NGAYMOSO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="THAMSOes">
+      <EntityTypeMapping TypeName="QuanlySoTietKiemModel.THAMSO">
+        <MappingFragment StoreEntitySet="THAMSO">
+          <ScalarProperty Name="TIENLAI" ColumnName="TIENLAI" />
+          <ScalarProperty Name="SODU" ColumnName="SODU" />
+          <ScalarProperty Name="SOTIENGUITOITHIEU" ColumnName="SOTIENGUITOITHIEU" />
+          <ScalarProperty Name="SOTIENGUITHEMTOITHIEU" ColumnName="SOTIENGUITHEMTOITHIEU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

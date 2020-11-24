@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanlySoTietKiemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="KHACHHANG">
+    <Key>
+      <PropertyRef Name="MAKH" />
+    </Key>
+    <Property Name="MAKH" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="HOTEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CMND" Type="tinyint" Nullable="false" />
+    <Property Name="DIACHI" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LOAITIETKIEM">
+    <Key>
+      <PropertyRef Name="MALOAITK" />
+    </Key>
+    <Property Name="MALOAITK" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LOAI" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LAIXUAT" Type="float" Nullable="false" />
+    <Property Name="KYHAN" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PHIEUGUITIEN">
+    <Key>
+      <PropertyRef Name="MAPHIEUGT" />
+    </Key>
+    <Property Name="MAPHIEUGT" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MAKH" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SOTIENGUI" Type="float" Nullable="false" />
+    <Property Name="NGAYGUI" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PHIEURUTTIEN">
+    <Key>
+      <PropertyRef Name="MAPHIEURT" />
+    </Key>
+    <Property Name="MAPHIEURT" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MAKH" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SOTIENRUT" Type="float" Nullable="false" />
+    <Property Name="NGAYRUT" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SOTIETKIEM">
+    <Key>
+      <PropertyRef Name="MASOTK" />
+    </Key>
+    <Property Name="MASOTK" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MAKH" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MALOAITK" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SOTIENGUI" Type="float" Nullable="false" />
+    <Property Name="MAPHIEUGT" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="NGAYMOSO" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QuanlySoTietKiem.dbo.THAMSO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="THAMSO">
+    <Key>
+      <PropertyRef Name="TIENLAI" />
+      <PropertyRef Name="SODU" />
+      <PropertyRef Name="SOTIENGUITOITHIEU" />
+      <PropertyRef Name="SOTIENGUITHEMTOITHIEU" />
+    </Key>
+    <Property Name="TIENLAI" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="SODU" Type="float" Nullable="false" />
+    <Property Name="SOTIENGUITOITHIEU" Type="float" Nullable="false" />
+    <Property Name="SOTIENGUITHEMTOITHIEU" Type="float" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_PGT_MAKH">
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
+    <End Role="PHIEUGUITIEN" Type="Self.PHIEUGUITIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="MAKH" />
+      </Principal>
+      <Dependent Role="PHIEUGUITIEN">
+        <PropertyRef Name="MAKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRT_MAKH">
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
+    <End Role="PHIEURUTTIEN" Type="Self.PHIEURUTTIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="MAKH" />
+      </Principal>
+      <Dependent Role="PHIEURUTTIEN">
+        <PropertyRef Name="MAKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STK_MAKH">
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
+    <End Role="SOTIETKIEM" Type="Self.SOTIETKIEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="MAKH" />
+      </Principal>
+      <Dependent Role="SOTIETKIEM">
+        <PropertyRef Name="MAKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STK_MALOAITK">
+    <End Role="LOAITIETKIEM" Type="Self.LOAITIETKIEM" Multiplicity="1" />
+    <End Role="SOTIETKIEM" Type="Self.SOTIETKIEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAITIETKIEM">
+        <PropertyRef Name="MALOAITK" />
+      </Principal>
+      <Dependent Role="SOTIETKIEM">
+        <PropertyRef Name="MALOAITK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STK_MAPHIEUGT">
+    <End Role="PHIEUGUITIEN" Type="Self.PHIEUGUITIEN" Multiplicity="1" />
+    <End Role="SOTIETKIEM" Type="Self.SOTIETKIEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHIEUGUITIEN">
+        <PropertyRef Name="MAPHIEUGT" />
+      </Principal>
+      <Dependent Role="SOTIETKIEM">
+        <PropertyRef Name="MAPHIEUGT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanlySoTietKiemModelStoreContainer">
+    <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOAITIETKIEM" EntityType="Self.LOAITIETKIEM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHIEUGUITIEN" EntityType="Self.PHIEUGUITIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHIEURUTTIEN" EntityType="Self.PHIEURUTTIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SOTIETKIEM" EntityType="Self.SOTIETKIEM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="THAMSO" EntityType="Self.THAMSO" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [THAMSO].[TIENLAI] AS [TIENLAI], 
+    [THAMSO].[SODU] AS [SODU], 
+    [THAMSO].[SOTIENGUITOITHIEU] AS [SOTIENGUITOITHIEU], 
+    [THAMSO].[SOTIENGUITHEMTOITHIEU] AS [SOTIENGUITHEMTOITHIEU]
+    FROM [dbo].[THAMSO] AS [THAMSO]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_PGT_MAKH" Association="Self.FK_PGT_MAKH">
+      <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+      <End Role="PHIEUGUITIEN" EntitySet="PHIEUGUITIEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRT_MAKH" Association="Self.FK_PRT_MAKH">
+      <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+      <End Role="PHIEURUTTIEN" EntitySet="PHIEURUTTIEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STK_MAKH" Association="Self.FK_STK_MAKH">
+      <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+      <End Role="SOTIETKIEM" EntitySet="SOTIETKIEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STK_MALOAITK" Association="Self.FK_STK_MALOAITK">
+      <End Role="LOAITIETKIEM" EntitySet="LOAITIETKIEM" />
+      <End Role="SOTIETKIEM" EntitySet="SOTIETKIEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STK_MAPHIEUGT" Association="Self.FK_STK_MAPHIEUGT">
+      <End Role="PHIEUGUITIEN" EntitySet="PHIEUGUITIEN" />
+      <End Role="SOTIETKIEM" EntitySet="SOTIETKIEM" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
