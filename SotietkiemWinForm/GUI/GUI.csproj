@@ -88,6 +88,18 @@
     <Compile Include="DAL\THAMSO.cs">
       <DependentUpon>ModelSoTietKiem.tt</DependentUpon>
     </Compile>
+    <Compile Include="formBCngay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formBCngay.Designer.cs">
+      <DependentUpon>formBCngay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formBCthang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formBCthang.Designer.cs">
+      <DependentUpon>formBCthang.cs</DependentUpon>
+    </Compile>
     <Compile Include="formGuiTien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +126,12 @@
     <Compile Include="formTimKiem.Designer.cs">
       <DependentUpon>formTimKiem.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="formBCngay.resx">
+      <DependentUpon>formBCngay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formBCthang.resx">
+      <DependentUpon>formBCthang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formGuiTien.resx">
       <DependentUpon>formGuiTien.cs</DependentUpon>
     </EmbeddedResource>
