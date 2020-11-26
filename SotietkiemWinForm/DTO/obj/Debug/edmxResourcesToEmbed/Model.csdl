@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanlySoTietKiemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BAOCAONGAY">
+    <Key>
+      <PropertyRef Name="MABAOCAONGAY" />
+    </Key>
+    <Property Name="MABAOCAONGAY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MALOAITK" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NGAY" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TONGTHU" Type="Double" Nullable="false" />
+    <Property Name="TONGCHI" Type="Double" Nullable="false" />
+    <Property Name="CHENHLECH" Type="Double" Nullable="false" />
+    <NavigationProperty Name="LOAITIETKIEM" Relationship="Self.FK_BCN_MALOAITK" FromRole="BAOCAONGAY" ToRole="LOAITIETKIEM" />
+    <NavigationProperty Name="BAOCAOTHANGs" Relationship="Self.FK_BCT_MABAOCAONGAY" FromRole="BAOCAONGAY" ToRole="BAOCAOTHANG" />
+  </EntityType>
+  <EntityType Name="BAOCAOTHANG">
+    <Key>
+      <PropertyRef Name="MABAOCAOTHANG" />
+    </Key>
+    <Property Name="MABAOCAOTHANG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MABAOCAONGAY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MALOAITK" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NGAYBAOCAO" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="THANG" Type="Int32" Nullable="false" />
+    <Property Name="SOMO" Type="Int32" Nullable="false" />
+    <Property Name="SODONG" Type="Int32" Nullable="false" />
+    <Property Name="CHENHLECH" Type="Double" Nullable="false" />
+    <NavigationProperty Name="BAOCAONGAY" Relationship="Self.FK_BCT_MABAOCAONGAY" FromRole="BAOCAOTHANG" ToRole="BAOCAONGAY" />
+    <NavigationProperty Name="LOAITIETKIEM" Relationship="Self.FK_BCT_MALOAITK" FromRole="BAOCAOTHANG" ToRole="LOAITIETKIEM" />
+  </EntityType>
+  <EntityType Name="KHACHHANG">
+    <Key>
+      <PropertyRef Name="MAKH" />
+    </Key>
+    <Property Name="MAKH" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HOTEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CMND" Type="Double" Nullable="false" />
+    <Property Name="DIACHI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="PHIEUGUITIENs" Relationship="Self.FK_PGT_MAKH" FromRole="KHACHHANG" ToRole="PHIEUGUITIEN" />
+    <NavigationProperty Name="PHIEURUTTIENs" Relationship="Self.FK_PRT_MAKH" FromRole="KHACHHANG" ToRole="PHIEURUTTIEN" />
+    <NavigationProperty Name="SOTIETKIEMs" Relationship="Self.FK_STK_MAKH" FromRole="KHACHHANG" ToRole="SOTIETKIEM" />
+  </EntityType>
+  <EntityType Name="LOAITIETKIEM">
+    <Key>
+      <PropertyRef Name="MALOAITK" />
+    </Key>
+    <Property Name="MALOAITK" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LOAI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LAIXUAT" Type="Double" Nullable="false" />
+    <Property Name="KYHAN" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BAOCAONGAYs" Relationship="Self.FK_BCN_MALOAITK" FromRole="LOAITIETKIEM" ToRole="BAOCAONGAY" />
+    <NavigationProperty Name="BAOCAOTHANGs" Relationship="Self.FK_BCT_MALOAITK" FromRole="LOAITIETKIEM" ToRole="BAOCAOTHANG" />
+    <NavigationProperty Name="SOTIETKIEMs" Relationship="Self.FK_STK_MALOAITK" FromRole="LOAITIETKIEM" ToRole="SOTIETKIEM" />
+  </EntityType>
+  <EntityType Name="PHIEUGUITIEN">
+    <Key>
+      <PropertyRef Name="MAPHIEUGT" />
+    </Key>
+    <Property Name="MAPHIEUGT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MAKH" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SOTIENGUI" Type="Double" Nullable="false" />
+    <Property Name="NGAYGUI" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="KHACHHANG" Relationship="Self.FK_PGT_MAKH" FromRole="PHIEUGUITIEN" ToRole="KHACHHANG" />
+  </EntityType>
+  <EntityType Name="PHIEURUTTIEN">
+    <Key>
+      <PropertyRef Name="MAPHIEURT" />
+    </Key>
+    <Property Name="MAPHIEURT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MAKH" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SOTIENRUT" Type="Double" Nullable="false" />
+    <Property Name="NGAYRUT" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="KHACHHANG" Relationship="Self.FK_PRT_MAKH" FromRole="PHIEURUTTIEN" ToRole="KHACHHANG" />
+  </EntityType>
+  <EntityType Name="SOTIETKIEM">
+    <Key>
+      <PropertyRef Name="MASOTK" />
+    </Key>
+    <Property Name="MASOTK" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MAKH" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MALOAITK" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SOTIENGUI" Type="Double" Nullable="false" />
+    <Property Name="NGAYMOSO" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="KHACHHANG" Relationship="Self.FK_STK_MAKH" FromRole="SOTIETKIEM" ToRole="KHACHHANG" />
+    <NavigationProperty Name="LOAITIETKIEM" Relationship="Self.FK_STK_MALOAITK" FromRole="SOTIETKIEM" ToRole="LOAITIETKIEM" />
+  </EntityType>
+  <EntityType Name="THAMSO">
+    <Key>
+      <PropertyRef Name="TIENLAI" />
+      <PropertyRef Name="SODU" />
+      <PropertyRef Name="SOTIENGUITOITHIEU" />
+      <PropertyRef Name="SOTIENGUITHEMTOITHIEU" />
+    </Key>
+    <Property Name="TIENLAI" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="SODU" Type="Double" Nullable="false" />
+    <Property Name="SOTIENGUITOITHIEU" Type="Double" Nullable="false" />
+    <Property Name="SOTIENGUITHEMTOITHIEU" Type="Double" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_BCN_MALOAITK">
+    <End Role="LOAITIETKIEM" Type="Self.LOAITIETKIEM" Multiplicity="1" />
+    <End Role="BAOCAONGAY" Type="Self.BAOCAONGAY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAITIETKIEM">
+        <PropertyRef Name="MALOAITK" />
+      </Principal>
+      <Dependent Role="BAOCAONGAY">
+        <PropertyRef Name="MALOAITK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BCT_MABAOCAONGAY">
+    <End Role="BAOCAONGAY" Type="Self.BAOCAONGAY" Multiplicity="1" />
+    <End Role="BAOCAOTHANG" Type="Self.BAOCAOTHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BAOCAONGAY">
+        <PropertyRef Name="MABAOCAONGAY" />
+      </Principal>
+      <Dependent Role="BAOCAOTHANG">
+        <PropertyRef Name="MABAOCAONGAY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BCT_MALOAITK">
+    <End Role="LOAITIETKIEM" Type="Self.LOAITIETKIEM" Multiplicity="1" />
+    <End Role="BAOCAOTHANG" Type="Self.BAOCAOTHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAITIETKIEM">
+        <PropertyRef Name="MALOAITK" />
+      </Principal>
+      <Dependent Role="BAOCAOTHANG">
+        <PropertyRef Name="MALOAITK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PGT_MAKH">
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
+    <End Role="PHIEUGUITIEN" Type="Self.PHIEUGUITIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="MAKH" />
+      </Principal>
+      <Dependent Role="PHIEUGUITIEN">
+        <PropertyRef Name="MAKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRT_MAKH">
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
+    <End Role="PHIEURUTTIEN" Type="Self.PHIEURUTTIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="MAKH" />
+      </Principal>
+      <Dependent Role="PHIEURUTTIEN">
+        <PropertyRef Name="MAKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STK_MAKH">
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
+    <End Role="SOTIETKIEM" Type="Self.SOTIETKIEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="MAKH" />
+      </Principal>
+      <Dependent Role="SOTIETKIEM">
+        <PropertyRef Name="MAKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STK_MALOAITK">
+    <End Role="LOAITIETKIEM" Type="Self.LOAITIETKIEM" Multiplicity="1" />
+    <End Role="SOTIETKIEM" Type="Self.SOTIETKIEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAITIETKIEM">
+        <PropertyRef Name="MALOAITK" />
+      </Principal>
+      <Dependent Role="SOTIETKIEM">
+        <PropertyRef Name="MALOAITK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanlySoTietKiemEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BAOCAONGAYs" EntityType="Self.BAOCAONGAY" />
+    <EntitySet Name="BAOCAOTHANGs" EntityType="Self.BAOCAOTHANG" />
+    <EntitySet Name="KHACHHANGs" EntityType="Self.KHACHHANG" />
+    <EntitySet Name="LOAITIETKIEMs" EntityType="Self.LOAITIETKIEM" />
+    <EntitySet Name="PHIEUGUITIENs" EntityType="Self.PHIEUGUITIEN" />
+    <EntitySet Name="PHIEURUTTIENs" EntityType="Self.PHIEURUTTIEN" />
+    <EntitySet Name="SOTIETKIEMs" EntityType="Self.SOTIETKIEM" />
+    <EntitySet Name="THAMSOes" EntityType="Self.THAMSO" />
+    <AssociationSet Name="FK_BCN_MALOAITK" Association="Self.FK_BCN_MALOAITK">
+      <End Role="LOAITIETKIEM" EntitySet="LOAITIETKIEMs" />
+      <End Role="BAOCAONGAY" EntitySet="BAOCAONGAYs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BCT_MABAOCAONGAY" Association="Self.FK_BCT_MABAOCAONGAY">
+      <End Role="BAOCAONGAY" EntitySet="BAOCAONGAYs" />
+      <End Role="BAOCAOTHANG" EntitySet="BAOCAOTHANGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BCT_MALOAITK" Association="Self.FK_BCT_MALOAITK">
+      <End Role="LOAITIETKIEM" EntitySet="LOAITIETKIEMs" />
+      <End Role="BAOCAOTHANG" EntitySet="BAOCAOTHANGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PGT_MAKH" Association="Self.FK_PGT_MAKH">
+      <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
+      <End Role="PHIEUGUITIEN" EntitySet="PHIEUGUITIENs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRT_MAKH" Association="Self.FK_PRT_MAKH">
+      <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
+      <End Role="PHIEURUTTIEN" EntitySet="PHIEURUTTIENs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STK_MAKH" Association="Self.FK_STK_MAKH">
+      <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
+      <End Role="SOTIETKIEM" EntitySet="SOTIETKIEMs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STK_MALOAITK" Association="Self.FK_STK_MALOAITK">
+      <End Role="LOAITIETKIEM" EntitySet="LOAITIETKIEMs" />
+      <End Role="SOTIETKIEM" EntitySet="SOTIETKIEMs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

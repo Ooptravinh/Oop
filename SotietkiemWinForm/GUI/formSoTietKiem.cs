@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GUI.DAL;
+using DTO;
 
 namespace GUI
 {
@@ -135,15 +135,14 @@ namespace GUI
 
             //da xuat hien trong csdl
 
-            SOTIETKIEM sv = database.SOTIETKIEMs.Where(s => s.MASOTK == MaTK).SingleOrDefault();
-            if (sv != null)
+            SOTIETKIEM stk = database.SOTIETKIEMs.Where(s => s.MASOTK == MaTK).SingleOrDefault();
+            if (stk != null)
             {
                 MessageBox.Show("Sổ Tiết Kiệm đã tồn tại");
                 return;
             }
             else
             {
-                SOTIETKIEM stk = new SOTIETKIEM();
                 KHACHHANG kh = new KHACHHANG();
                 int countkh = 0;
                 string chuoikh = "";
