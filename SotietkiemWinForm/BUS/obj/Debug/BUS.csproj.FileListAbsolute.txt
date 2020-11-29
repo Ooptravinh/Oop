@@ -1,0 +1,11 @@
+D:\Oop\SotietkiemWinForm\BUS\bin\Debug\BUS.dll
+D:\Oop\SotietkiemWinForm\BUS\bin\Debug\BUS.pdb
+D:\Oop\SotietkiemWinForm\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+D:\Oop\SotietkiemWinForm\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\Oop\SotietkiemWinForm\BUS\obj\Debug\BUS.dll
+D:\Oop\SotietkiemWinForm\BUS\obj\Debug\BUS.pdb
+D:\Oop\SotietkiemWinForm\BUS\bin\Debug\DAO.dll
+D:\Oop\SotietkiemWinForm\BUS\bin\Debug\DAO.pdb
+D:\Oop\SotietkiemWinForm\BUS\bin\Debug\DAO.dll.config
+D:\Oop\SotietkiemWinForm\BUS\bin\Debug\EntityFramework.xml
+D:\Oop\SotietkiemWinForm\BUS\obj\Debug\BUS.csproj.CopyComplete

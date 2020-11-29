@@ -47,3 +47,10 @@ D:\Oop\SotietkiemWinForm\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 D:\Oop\SotietkiemWinForm\GUI\obj\Debug\GUI.csproj.CopyComplete
 D:\Oop\SotietkiemWinForm\GUI\obj\Debug\GUI.exe
 D:\Oop\SotietkiemWinForm\GUI\obj\Debug\GUI.pdb
+D:\Oop\SotietkiemWinForm\GUI\bin\Debug\DAO.dll
+D:\Oop\SotietkiemWinForm\GUI\bin\Debug\DAO.pdb
+D:\Oop\SotietkiemWinForm\GUI\obj\Debug\GUI.formBCngay.resources
+D:\Oop\SotietkiemWinForm\GUI\obj\Debug\GUI.formBCthang.resources
+D:\Oop\SotietkiemWinForm\GUI\bin\Debug\BUS.dll
+D:\Oop\SotietkiemWinForm\GUI\bin\Debug\BUS.pdb
+D:\Oop\SotietkiemWinForm\GUI\bin\Debug\DAO.dll.config

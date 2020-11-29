@@ -1,0 +1,12 @@
+D:\Oop\SotietkiemWinForm\DAO\bin\Debug\DAO.dll
+D:\Oop\SotietkiemWinForm\DAO\bin\Debug\DAO.pdb
+D:\Oop\SotietkiemWinForm\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\Oop\SotietkiemWinForm\DAO\obj\Debug\DAO.dll
+D:\Oop\SotietkiemWinForm\DAO\obj\Debug\DAO.pdb
+D:\Oop\SotietkiemWinForm\DAO\bin\Debug\DAO.dll.config
+D:\Oop\SotietkiemWinForm\DAO\bin\Debug\EntityFramework.dll
+D:\Oop\SotietkiemWinForm\DAO\bin\Debug\EntityFramework.SqlServer.dll
+D:\Oop\SotietkiemWinForm\DAO\bin\Debug\EntityFramework.xml
+D:\Oop\SotietkiemWinForm\DAO\bin\Debug\EntityFramework.SqlServer.xml
+D:\Oop\SotietkiemWinForm\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+D:\Oop\SotietkiemWinForm\DAO\obj\Debug\DAO.csproj.CopyComplete
